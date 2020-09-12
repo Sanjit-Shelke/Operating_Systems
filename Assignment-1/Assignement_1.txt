@@ -1,0 +1,344 @@
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+ANS:-
+a)
+date =>day date time will be shown
+date +%a =>short name of day will be shown only
+date +%A =>full name of day will be shown only
+date +%b =>short name of month will be shown only
+date +%B =>full name of month will be shown only
+date +%c =>locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+date +%C =>century; like %Y, except omit last two digits (e.g., 20)
+date +%d or +%e =>short date will be shown only
+date +%D =>full date format will be shown with forward slashes only
+date +%F =>full date format will be shown with hi-fens only
+date +%g  :last two digits of year of ISO week number (see %G)
+date +%G  :year of ISO week number (see %V); normally useful only with %V
+date +%h  :same as %b
+date +%H  :hour (00..23)
+date +%I  :hour (01..12)
+date +%j  :day of year (001..366)
+date +%k  :hour, space padded ( 0..23); same as %_H
+date +%l  :hour, space padded ( 1..12); same as %_I
+date +%m  :month (01..12)
+date +%M  :minute (00..59)
+date +%n  :a newline
+date +%N  :nanoseconds (000000000..999999999)
+date +%p  :locale's equivalent of either AM or PM; blank if not known
+date +%P  :like %p, but lower case
+date +%r  :locale's 12\-hour clock time (e.g., 11:11:04 PM)
+date +%R  :24\-hour hour and minute; same as %H:%M
+date +%s  :seconds since 1970\-01\-01 00:00:00 UTC
+date +%S  :second (00..60)
+date +%T =>time will be shown only
+
+b)cal => show calendar
+
+c)bc => is basic calculator in linux. after typing this command one can do basic calculator operations
+
+d)echo => echo command in linux is used to display line of text/string that are passed as an argument .
+1. \b  : it removes all the spaces in between the text
+2. \c : suppress trailing new line with backspace interpreter
+3. \n : this option creates new line from where it is used.
+4. \t : this option is used to create horizontal tab spaces.
+5. \r : carriage return with backspace interpreter ‘-e‘ to have specified carriage return in output.
+6. \v : this option is used to create vertical tab spaces.
+7. \a : alert return with backspace interpreter ‘-e‘ to have sound alert.
+8. echo * : this command will print all files/folders, similar to ls command .
+9. -n : this option is used to omit echoing trailing newline .
+
+e)
+who =>  The who command is used to get information about currently logged in user on to system
+
+f)
+whoami =>  To display system’s username
+
+g)
+logname => print user´s login name,Print the name of the current user
+
+h)
+uname => uname is a command-line utility that prints basic information about the operating system name and system hardware
+
+-s, (--kernel-name) - Prints the kernel name.
+-n, (--nodename) - Prints the system’s node name (hostname). This is the name the system uses when communicating over the network. When used with the -n option, uname produces the same output as the hostname command.
+-r, (--kernel-release) - Prints the kernel release.
+-v, (--kernel-version) - Prints the kernel version.
+-m, (--machine) - Prints the name of the machine’s hardware name.
+-p, (--processor) - Prints the architecture of the processor.
+-i, (--hardware-platform) - Prints the hardware platform.
+-o, (--operating-system) - Print the name of the operating system. On Linux systems that is “GNU/Linux”
+-a, (--all) - When the -a option is used, uname behaves the same as if the -snrvmo options have been given.
+
+i)seq => seq command in Linux is used to generate numbers from FIRST to LAST in steps of INCREMENT. It is a very useful command where we had to generate list of numbers in while, for, until loop.
+
+1. seq LAST : When only one argument is given then it produces numbers from 1 to LAST in step increment of 1. If the LAST is less than 1, then is produces no output.
+2. seq FIRST LAST : When two arguments are given then it produces numbers from FIRST till LAST is step increment of 1. If LAST is less than FIRST, then it produces no output
+3. seq FIRST INCREMENT LAST : When three arguments are given then it produces numbers from FIRST till LAST in step of INCREMENT. If LAST is less than FIRST, then it produces no output.
+4. seq -f “FORMAT” FIRST INCREMENT LAST : This command is used to generate sequence in a formatted manner. FIRST and INCREMENT are optional.
+5. seq -s “STRING” FIRST INCREMENT LAST : This command is uses to STRING to separate numbers. By default this value is equal to "\n". FIRST and INCREMENT are optional.
+6. seq -w FIRST INCREMENT LAST : This command is used to equalise width by padding with leading zeroes. FIRST and INCREMENT are optional.
+
+j)
+clear => clear screen.
+
+Q2.
+A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+ANS:-1.mkdir a b c
+     2.Go Into each directory and run
+       dir a -> touch a.txt
+       dir b -> touch b.txt
+        dir c -> touch c.txt
+			OR
+       touch ./a/a.txt ./b/b.txt  ./c/c.txt
+
+B)Move Directory b to c.
+-->mv b c
+
+
+C)Create alias of ls -lh command to your name.
+ANS:-1. sudo nano .bash_profile
+     2. alias list='ls -lh'
+
+D)Change Directory name a to cdac.
+ANS:- mv a cdac
+
+Q3. 
+A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+ANS:-1. touch file1.txt
+        touch file2.txt
+        touch file3.txt    or  touch file1.txt file2.txt file3.txt file4.txt file5.txt
+	touch file4.txt
+	touch file5.txt
+
+	grep "s" *.txt      
+
+     2. cat file1.txt | grep s
+        cat file2.txt | grep s
+        cat file3.txt | grep s   
+	cat file4.txt | grep s
+	cat file5.txt | grep s
+
+
+B)Create file.txt using cat and edit that using nano editor.
+ANS:- 
+        cat > file.txt
+	nano file.txt
+
+c)Create 5 empty files using touch command
+ANS:-   touch file1.txt file2.txt file3.txt file4.txt file5.txt
+      
+D)Remove previously created directory a , b and c.
+ANS:- rm -R c
+      rm -r cdac
+
+
+Q4.
+Create a file with some content using vi editor
+ANS:- 1.vi assign.txt
+      2.Press "i" to switch into insert mode.
+      3."Hello Operating System!"
+      4.Press ESC key to save change and returns into command mode.
+      5.press SHIFT+ZZ to save file and quit.
+
+a) Display the file using cat command
+Ans:- cat assign.txt
+	
+b) Display line numbers along with content
+ANS:- cat -n assign.txt
+
+c) Display the file in reverse order using tac
+ANS:- tac assign.txt
+
+d) Combine multiple files using cat command
+ANS:- cat file1.txt file2.txt > file6.txt
+
+
+
+Q5.
+Create Random some files and sub directories.
+a) display files row wise, column wise, 1 per row
+ANS:- ls -l
+	
+b) sort the files in ascending, descending order
+ANS:-
+> ls -1   (sort by name asc)
+> ls -1 -r (sort by name desc)
+> ls -al -S (sort by size desc)
+> ls -al -Sr <sort by size asc)
+
+c) Create some hidden files and sub directories and display them using “ls -a”
+ANS:- 
+> touch .hide.txt
+> ls -a
+
+d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+ANS:- touch -t stamp.txt
+
+e) Recursive display contents of your home directory.
+ANS:- ls -R
+
+f) display all attributes of files and directories using ls -l
+g) display attributes of a directory using ls -ld
+
+
+==============================================================================================================================================================================================================================
+==============================================================================================================================================================================================================================
+
+Q1.Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+ANS:-
+1. touch a.txt b.txt c.txt d.sh
+2. chmod -R g-rwx Sanjit
+3. chmod -R o-rwx Sanjit
+
+a)
+1.chmod 611 a.txt
+2.chmod 611 b.txt
+
+b)chmod 211 c.txt
+
+c)chmod 177 d.sh
+
+
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+
+ANS:-chmod a+x d.sh
+
+Q3. Change the permission of the previous directory to read only.
+
+ANS:- chmod a+r ../	
+
+==============================================================================================================================================================================================================================
+==============================================================================================================================================================================================================================
+
+Q1.Create Three level nested directory a,b and c
+ANS:- mkdir -p nested/a/b/c
+
+a)Create at least one hidden file in each directory
+b)Create at least one normal text file in each directory
+ANS:- touch filea.txt ./b/fileb.txt ./b/c/filec.txt
+
+c)Copy c into a
+ANS:- cp -r b/c ./
+
+d)Copy file inside a into b
+ANS:-  cp filea.txt b/
+
+
+
+2.Change the third level directory c permission to read only
+ANS:- chmod a+r b/c
+
+3.Try copying third level c directory to outside of a
+ANS:- cp b/c ../
+
+4.Create the directory  “data“ inside b
+ANS:- mkdir b/data
+
+5.Change the permission of b to read and write only
+ANS:- chmod u+rww b
+
+6.Create directory “data2”  inside b
+ANS:- mkdir b/data2
+
+7.Create data.txt file inside b
+ANS:- touch  b/data.txt
+
+8.Rename the second level directory c to copied_dir
+ANS:- mv b/c a
+
+9.Change permission of copied_dir to only executable
+ANS:- chmod u+x b/c
+
+10.Try ls on copied_dir
+ANS:- 
+
+11.Try moving copied_dir to outside of a
+ANS:-
+
+12.Try moving data directory outside of a
+ANS:-
+13.Now change the owner of the directory a to root
+ANS:-sudo chown root a
+
+14.Change permission of a to read write and executable to only user
+ANS:- chmod 711 a
+ 
+15.Try creating directory sample inside a
+ANS:- mkdir a/d
+
+16.Create directory x outside a
+ANS:- mkdir ../x
+
+17.Try moving x inside a
+ANS:-mv x ./a
+
+18.Create directory movies
+ANS:-mkdir movies
+
+19.Change group of movies to sudo
+ANS:-sudo usermod -aG sudo newuser
+
+20.Change group of movies to avahi
+ANS:-chgrp scifi myfile
+	ls -l myfile
+
+21.Try changing permission after changing ownership to root
+ANS:-sudo chmod --recursive a+rwx /tmp
+
+22.Try Changing permission after changing group to sudo without sudo
+ANS:-pkexec chmod go-w /usr/lib/sudo/sudoers.so
+
+23.Try Changing owner and group both to root
+ANS:-sudo chown -R username:group directory
+
+24.Try changinging permission
+ANS:-sudo usermod -aG sudo newuser
+
+25.Try deleting the file
+ANS:-rm -rf a.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
